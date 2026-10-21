@@ -1,0 +1,12 @@
+{
+  "public/og.png": {
+    "origin": "Original browser-rendered typography using the approved Prelude logotype, tagline and palette from brand/landing-page-brief.md. Inter and JetBrains Mono from locally installed Fontsource packages. No generative image prompt."
+  },
+  "public/favicon.svg": {
+    "origin": "Original vector construction of the user-specified ::* mark: four dots for two colons and a six-arm asterisk, cyan on ink."
+  },
+  "public/favicon.ico": { "origin": "16px and 32px rasterisations of public/favicon.svg." },
+  "public/apple-touch-icon.png": { "origin": "180px rasterisation of public/favicon.svg." },
+  "public/icon-192.png": { "origin": "192px rasterisation of public/favicon.svg." },
+  "public/icon-512.png": { "origin": "512px rasterisation of public/favicon.svg." }
+}

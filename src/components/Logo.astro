@@ -1,0 +1,5 @@
+---
+interface Props { animated?: boolean; }
+const { animated = false } = Astro.props;
+---
+<a href="#top" class="logo" aria-label="Prelude — back to top">prelude<span class:list={['logo-suffix', { 'logo-suffix-animated': animated }]}>::*</span></a>

@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-21T13:20:00Z",
+  "title": "Design System: Prelude",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15% 0.018 255)",
+          "oklch(26% 0.018 255)",
+          "oklch(38% 0.018 255)",
+          "oklch(49% 0.018 255)",
+          "oklch(61% 0.018 255)",
+          "oklch(72% 0.018 255)",
+          "oklch(84% 0.018 255)",
+          "oklch(95% 0.018 255)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "tonalRamp": [
+          "oklch(15% 0.028 252)",
+          "oklch(26% 0.028 252)",
+          "oklch(38% 0.028 252)",
+          "oklch(49% 0.028 252)",
+          "oklch(61% 0.028 252)",
+          "oklch(72% 0.028 252)",
+          "oklch(84% 0.028 252)",
+          "oklch(95% 0.028 252)"
+        ]
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "tonalRamp": [
+          "oklch(15% 0.033 257)",
+          "oklch(26% 0.033 257)",
+          "oklch(38% 0.033 257)",
+          "oklch(49% 0.033 257)",
+          "oklch(61% 0.033 257)",
+          "oklch(72% 0.033 257)",
+          "oklch(84% 0.033 257)",
+          "oklch(95% 0.033 257)"
+        ]
+      },
+      "cloud": {
+        "role": "neutral",
+        "displayName": "Cloud",
+        "tonalRamp": [
+          "oklch(15% 0.004 248)",
+          "oklch(26% 0.004 248)",
+          "oklch(38% 0.004 248)",
+          "oklch(49% 0.004 248)",
+          "oklch(61% 0.004 248)",
+          "oklch(72% 0.004 248)",
+          "oklch(84% 0.004 248)",
+          "oklch(95% 0.004 248)"
+        ]
+      },
+      "slate": {
+        "role": "neutral",
+        "displayName": "Slate",
+        "tonalRamp": [
+          "oklch(15% 0.04 257)",
+          "oklch(26% 0.04 257)",
+          "oklch(38% 0.04 257)",
+          "oklch(49% 0.04 257)",
+          "oklch(61% 0.04 257)",
+          "oklch(72% 0.04 257)",
+          "oklch(84% 0.04 257)",
+          "oklch(95% 0.04 257)"
+        ]
+      },
+      "cyan": {
+        "role": "primary",
+        "displayName": "Cyan",
+        "tonalRamp": [
+          "oklch(15% 0.15 223)",
+          "oklch(26% 0.15 223)",
+          "oklch(38% 0.15 223)",
+          "oklch(49% 0.15 223)",
+          "oklch(61% 0.15 223)",
+          "oklch(72% 0.15 223)",
+          "oklch(84% 0.15 223)",
+          "oklch(95% 0.15 223)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Editorial display",
+        "purpose": "Two-line hero; mobile clamp is documented in DESIGN.md."
+      },
+      "label": {
+        "displayName": "Numbered orientation",
+        "purpose": "Concise lowercase indexing."
+      },
+      "signature": {
+        "displayName": "Live-text signature",
+        "purpose": "Masthead and footer identity."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "signature",
+        "value": "400ms steps(3, end) both",
+        "purpose": "Masthead suffix clip-path reveal once; disabled under prefers-reduced-motion."
+      },
+      {
+        "name": "terrain-ripple",
+        "value": "7s ease-in-out infinite; translateY(0) → translateY(-5px) → translateY(0)",
+        "purpose": "User-approved decorative hero point-field ripple; completely disabled for reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile-max",
+        "value": "639px"
+      },
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "gutter-compact-max",
+        "value": "900px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "principles-split",
+        "value": "1100px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "description": "Email action.",
+      "html": "<a class=\"ds-button-primary\" href=\"mailto:hello@prelude.build?subject=Project%20enquiry\">Start a conversation<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></a>",
+      "css": ".ds-button-primary{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:52px;padding:12px 22px;border:1px solid transparent;border-radius:3px;font:600 14px/1.4 var(--font-sans);text-decoration:none;background:var(--color-cyan);color:var(--color-ink);}.ds-button-primary:focus-visible{outline:2px solid var(--color-cyan);outline-offset:6px}.ds-button-primary:hover{background:var(--color-cloud)}.ds-button-primary:active{background:var(--color-slate)}",
+      "refersTo": "button-primary"
+    },
+    {
+      "name": "Compact action",
+      "kind": "button",
+      "description": "Email action.",
+      "html": "<a class=\"ds-button-compact\" href=\"mailto:hello@prelude.build?subject=Project%20enquiry\">Start a conversation<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></a>",
+      "css": ".ds-button-compact{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:52px;padding:12px 22px;border:1px solid transparent;border-radius:3px;font:600 14px/1.4 var(--font-sans);text-decoration:none;background:var(--color-cyan);color:var(--color-ink);min-height:42px;padding:10px 17px;font-size:12px;gap:20px;}.ds-button-compact:focus-visible{outline:2px solid var(--color-cyan);outline-offset:6px}.ds-button-compact:hover{background:var(--color-cloud)}.ds-button-compact:active{background:var(--color-slate)}@media(max-width:639px){.ds-button-compact{padding:10px 12px;font-size:11px;gap:0}.ds-button-compact svg{display:none}}",
+      "refersTo": "button-compact"
+    },
+    {
+      "name": "Secondary action",
+      "kind": "button",
+      "description": "In-page expertise action.",
+      "html": "<a class=\"ds-button-secondary\" href=\"#expertise\">Explore our expertise<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></a>",
+      "css": ".ds-button-secondary{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:52px;padding:12px 22px;border:1px solid transparent;border-radius:3px;font:600 14px/1.4 var(--font-sans);text-decoration:none;border-color:var(--color-graphite);color:var(--color-cloud);background:transparent;}.ds-button-secondary:focus-visible{outline:2px solid var(--color-cyan);outline-offset:6px}.ds-button-secondary:hover{background:var(--color-surface);border-color:var(--color-slate)}.ds-button-secondary svg{rotate:90deg}",
+      "refersTo": "button-secondary"
+    },
+    {
+      "name": "Masthead",
+      "kind": "nav",
+      "description": "Signature and compact contact action. The suffix animates once.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main\"><a class=\"ds-logo\" href=\"#top\" aria-label=\"Prelude — back to top\">prelude<span>::*</span></a><a class=\"ds-button-compact\" href=\"mailto:hello@prelude.build?subject=Project%20enquiry\">Start a conversation<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px 0;border-bottom:1px solid var(--color-graphite)}.ds-logo{display:inline-flex;align-items:baseline;font:600 23px/1 var(--font-mono);letter-spacing:-.055em;text-decoration:none;white-space:nowrap;color:var(--color-cloud)}.ds-logo span{color:var(--color-cyan);animation:ds-signature .4s steps(3,end) both}.ds-logo:focus-visible{outline:2px solid var(--color-cyan);outline-offset:6px}@keyframes ds-signature{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}@media(prefers-reduced-motion:reduce){.ds-logo span{animation:none}}@media(max-width:639px){.ds-logo{font-size:21px}}.ds-button-compact{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:52px;padding:12px 22px;border:1px solid transparent;border-radius:3px;font:600 14px/1.4 var(--font-sans);text-decoration:none;background:var(--color-cyan);color:var(--color-ink);min-height:42px;padding:10px 17px;font-size:12px;gap:20px;}.ds-button-compact:focus-visible{outline:2px solid var(--color-cyan);outline-offset:6px}.ds-button-compact:hover{background:var(--color-cloud)}.ds-button-compact:active{background:var(--color-slate)}@media(max-width:639px){.ds-button-compact{padding:10px 12px;font-size:11px;gap:0}.ds-button-compact svg{display:none}}"
+    },
+    {
+      "name": "Section label",
+      "kind": "custom",
+      "description": "Numbered orientation in the approved identity.",
+      "html": "<div class=\"ds-label\"><span>03</span><span>/</span><span>what</span></div>",
+      "css": ".ds-label{display:flex;align-items:baseline;gap:12px;font:500 11px/1.5 var(--font-mono);letter-spacing:.08em;color:var(--color-slate);white-space:nowrap}.ds-label span:first-child{color:var(--color-cyan)}",
+      "refersTo": "section-label"
+    },
+    {
+      "name": "Expertise block",
+      "kind": "custom",
+      "description": "Open ruled article, not an enclosing card.",
+      "html": "<article class=\"ds-expertise\"><h3>Technology strategy &amp; advisory</h3><p>Architecture reviews, technology selection, modernisation roadmaps and technical due diligence, with the reasoning written down.</p></article>",
+      "css": ".ds-expertise{padding:32px 32px 36px 0;border-top:1px solid var(--color-graphite);color:var(--color-cloud)}.ds-expertise h3{margin:0 0 16px;font:550 21px/1.4 var(--font-sans);letter-spacing:-.02em}.ds-expertise p{margin:0;max-width:43ch;font:400 16px/1.75 var(--font-sans);color:var(--color-slate)}@media(max-width:639px){.ds-expertise{padding:26px 0}}",
+      "refersTo": "expertise-item"
+    },
+    {
+      "name": "Approach step",
+      "kind": "custom",
+      "description": "Cyan index with a thin structural connector.",
+      "html": "<div class=\"ds-step\"><div class=\"ds-step-number\">01</div><h3>Understand.</h3><p>Your goals, your constraints, and the system as it actually runs.</p></div>",
+      "css": ".ds-step-number{display:flex;align-items:center;gap:20px;margin-bottom:25px;font:500 12px/1.5 var(--font-mono);color:var(--color-cyan)}.ds-step-number:after{content:\"\";height:1px;flex:1;background:var(--color-graphite)}.ds-step h3{margin:0 0 12px;font:550 21px/1.4 var(--font-sans);letter-spacing:-.02em;color:var(--color-cloud)}.ds-step p{margin:0;font:400 16px/1.75 var(--font-sans);color:var(--color-slate)}@media(max-width:639px){.ds-step-number{margin-bottom:12px}.ds-step h3{margin-bottom:6px}}"
+    },
+    {
+      "name": "Principle row",
+      "kind": "custom",
+      "description": "Compact indexed rule with supporting sentence.",
+      "html": "<div class=\"ds-principle\"><span class=\"ds-principle-number\">01</span><div><h3>Understand before prescribing.</h3><p>Constraints and outcomes come first.</p></div></div>",
+      "css": ".ds-principle{display:grid;grid-template-columns:24px minmax(0,1fr);gap:18px;padding:23px 0;border-top:1px solid var(--color-graphite)}.ds-principle-number{color:var(--color-slate);font:500 11px/1.7 var(--font-mono);padding-top:4px}.ds-principle h3{margin:0 0 5px;font:550 17px/1.4 var(--font-sans);letter-spacing:-.02em;color:var(--color-cloud)}.ds-principle p{margin:0;font:400 15px/1.75 var(--font-sans);color:var(--color-slate)}@media(max-width:639px){.ds-principle{gap:10px}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Architectural clarity",
+    "overview": "Architectural clarity expressed through precise typography and disciplined space. Ink and cloud establish a dark, flat reading environment; sparse cyan signals mark actions and orientation. Inter carries the editorial hierarchy, while JetBrains Mono gives the signature and indexing their technical character.\n\nThin structural rules and generous space organise content. The user-approved dotted cyan mountain adds an abstract point field to the hero; numbered labels remain a deliberate brand commitment. The navigation signature reveals once, and terrain rows ripple slowly. Both are static under reduced-motion preferences.",
+    "keyCharacteristics": [
+      "Dark ink canvas with cloud text and slate supporting copy.",
+      "Sparse cyan for actions, signature, links, focus and section numbers.",
+      "Editorial Inter paired with concise JetBrains Mono indexing.",
+      "Flat, ruled structures with generous responsive spacing."
+    ],
+    "rules": [
+      {
+        "name": "The Cyan Signal Rule",
+        "body": "Reserve cyan for the signature, primary actions, section and step numbers, links, selection, focus and the hero point field. Never use it as a large fill or gradient.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Inter carries headings and prose. JetBrains Mono carries the lowercase signature and concise indexing.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Structure Rule",
+        "body": "Use spacing and thin graphite rules to separate content; depth does not rely on shadows.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the approved dark palette and editorial typography; the dotted hero terrain is a user-approved exception to the original type-only brief.",
+      "Do use numbered mono labels as orientation, with cyan numbers and slate words.",
+      "Do preserve visible cyan focus outlines and immediate signature rendering under reduced motion.",
+      "Do keep content in reading order as grids collapse."
+    ],
+    "donts": [
+      "Don’t add fake terminals, invented code, neon gradients or unapproved decorative imagery outside the dotted hero terrain.",
+      "Don’t use cyan as a large surface fill or replace the asterisk with a star or spark.",
+      "Don’t add blinking cursors, scroll reveals or parallax. Keep motion limited to the logo reveal and slow hero ripple, with reduced-motion support.",
+      "Don’t add shadows or rounded card shells to the existing flat, ruled structures."
+    ]
+  }
+}

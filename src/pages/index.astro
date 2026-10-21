@@ -1,0 +1,147 @@
+---
+import '../styles/global.css';
+import Logo from '../components/Logo.astro';
+import ContactLink from '../components/ContactLink.astro';
+import Arrow from '../components/Arrow.astro';
+import Terrain from '../components/Terrain.astro';
+
+const situations = [
+  { title: 'Your system has become hard to change.', text: 'Costs creep up, releases slow down, and every change touches more than it should. We find where the complexity lives and plan a realistic path to improve it.' },
+  { title: 'A consequential technical decision is on the table.', text: 'A platform choice, a migration, a build-or-buy call. We pressure-test the options, make the trade-offs explicit and give you a recommendation you can defend.' },
+  { title: 'The plan exists, but delivery has stalled.', text: 'You know where you want to go but lack the time or specialist capacity to get there. We work alongside your team to put the approach into practice.' },
+];
+const expertise = [
+  { title: 'Technology strategy & advisory', text: 'Architecture reviews, technology selection, modernisation roadmaps and technical due diligence, with the reasoning written down.' },
+  { title: 'Software & systems architecture', text: 'Distributed systems, APIs and service boundaries designed for reliability, performance and future change.' },
+  { title: 'Cloud & platform engineering', text: 'Cloud-native and serverless design, infrastructure as code, observability and cost control for production platforms.' },
+  { title: 'Hands-on delivery', text: 'Prototypes, targeted implementation and engineering alongside your team, with documentation and knowledge transfer built in.' },
+];
+const steps = [
+  { title: 'Understand.', text: 'Your goals, your constraints, and the system as it actually runs.' },
+  { title: 'Decide.', text: 'The options and their trade-offs, a clear recommendation, and a record of why.' },
+  { title: 'Build.', text: 'Implementation alongside your engineers, adjusting as evidence comes in.' },
+  { title: 'Hand over.', text: 'Documented decisions and a team that can run and evolve what was built.' },
+];
+const principles = [
+  { title: 'Understand before prescribing.', text: 'Constraints and outcomes come first.' },
+  { title: 'Keep the essentials in scope.', text: 'Attention goes where it changes a decision.' },
+  { title: 'Choose the simplest adequate architecture.', text: 'Complexity has to earn its place.' },
+  { title: 'Make expertise transferable.', text: 'We explain our reasoning and document our decisions.' },
+  { title: 'Build for the next change.', text: 'Design for how the system will be operated and evolved.' },
+];
+const organisation = {
+  '@context': 'https://schema.org', '@type': 'Organization', name: 'Prelude', legalName: 'Prelude Engineering Limited', url: 'https://prelude.build/', email: 'hello@prelude.build',
+  address: { '@type': 'PostalAddress', streetAddress: '90 Leinster Road, Rathmines', addressLocality: 'Dublin 6', postalCode: 'D06 F3P4', addressCountry: 'IE' },
+};
+---
+<!doctype html>
+<html lang="en-IE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {import.meta.env.PROD && <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests" />}
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>Prelude — Technology strategy and architecture advisory</title>
+    <meta name="description" content="Technology strategy and architecture advisory, backed by hands-on engineering. Sound technical decisions, turned into dependable systems." />
+    <link rel="canonical" href="https://prelude.build/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" sizes="32x32" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0B0F14" />
+    <meta property="og:title" content="Prelude — Systems for what's next." />
+    <meta property="og:description" content="Technology strategy and architecture advisory, backed by hands-on engineering." />
+    <meta property="og:url" content="https://prelude.build/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://prelude.build/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json" set:html={JSON.stringify(organisation)} />
+  </head>
+  <body id="top">
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header class="page-width flex items-center justify-between gap-4 border-b border-graphite py-6 sm:py-7">
+      <nav aria-label="Main" class="flex w-full items-center justify-between gap-4">
+        <Logo animated /><ContactLink compact />
+      </nav>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <section aria-labelledby="hero-heading" class="hero page-width pb-12 pt-16 sm:pb-16 sm:pt-24 lg:pb-28 lg:pt-28">
+        <div class="hero-copy">
+        <div class="section-label mb-9 sm:mb-10"><span>01</span><span aria-hidden="true">/</span><span>prelude</span></div>
+        <h1 id="hero-heading" class="max-w-4xl text-[clamp(2.75rem,13.5vw,3.3rem)] font-semibold leading-[1.04] tracking-[-0.04em] sm:text-[clamp(3.3rem,7.4vw,6rem)]">Systems for<br />what’s next.</h1>
+        <p class="mt-8 max-w-[600px] text-[17px] leading-[1.75] text-slate sm:mt-9 sm:text-lg">Technology strategy and architecture advisory, backed by hands-on engineering. We help you make sound technical decisions and turn them into dependable systems.</p>
+        <div class="mt-9 flex flex-wrap gap-3 sm:mt-10 sm:gap-4">
+          <ContactLink />
+          <a href="#expertise" class="button button-secondary">Explore our expertise<Arrow direction="down" /></a>
+        </div>
+        </div>
+        <div class="hero-landscape"><Terrain /></div>
+        <div class="hero-disciplines" aria-hidden="true"><span>Technology strategy</span><span>Architecture</span><span>Hands-on engineering</span></div>
+      </section>
+
+      <section aria-labelledby="when-heading" class="page-width section-layout">
+        <div class="section-label" aria-hidden="true"><span>02</span><span>/</span><span>when</span></div>
+        <div>
+          <h2 id="when-heading" class="section-heading">When teams bring us in</h2>
+          <div class="grid gap-9 md:grid-cols-3 md:gap-7 lg:gap-10">
+            {situations.map(({ title, text }) => <article class="situation"><h3>{title}</h3><p class="body-copy">{text}</p></article>)}
+          </div>
+        </div>
+      </section>
+
+      <section id="expertise" aria-labelledby="expertise-heading" class="page-width section-layout">
+        <div class="section-label" aria-hidden="true"><span>03</span><span>/</span><span>what</span></div>
+        <div>
+          <h2 id="expertise-heading" class="section-heading">What we do</h2>
+          <div class="grid sm:grid-cols-2">
+            {expertise.map(({ title, text }) => <article class="expertise-item"><h3>{title}</h3><p class="body-copy">{text}</p></article>)}
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="approach-heading" class="page-width section-layout">
+        <div class="section-label" aria-hidden="true"><span>04</span><span>/</span><span>how</span></div>
+        <div>
+          <h2 id="approach-heading" class="section-heading">How we work</h2>
+          <ol class="grid list-none gap-8 p-0 sm:grid-cols-2 lg:grid-cols-4 lg:gap-7">
+            {steps.map(({ title, text }, i) => <li class="step"><div class="step-number" aria-hidden="true">{String(i + 1).padStart(2, '0')}</div><h3>{title}</h3><p class="body-copy">{text}</p></li>)}
+          </ol>
+        </div>
+      </section>
+
+      <section aria-labelledby="principles-heading" class="page-width section-layout">
+        <div class="section-label" aria-hidden="true"><span>05</span><span>/</span><span>why</span></div>
+        <div class="principles-layout">
+          <h2 id="principles-heading" class="section-heading">Principles</h2>
+          <ol class="m-0 list-none p-0">
+            {principles.map(({ title, text }, i) => <li class="principle"><span class="principle-number" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span><div><h3>{title}</h3><p class="body-copy">{text}</p></div></li>)}
+          </ol>
+        </div>
+      </section>
+
+      <section aria-labelledby="contact-heading" class="page-width section-layout">
+        <div class="section-label" aria-hidden="true"><span>06</span><span>/</span><span>next</span></div>
+        <div>
+          <h2 id="contact-heading" class="max-w-[760px] text-[clamp(2.2rem,4.2vw,3.5rem)] leading-[1.15]">Have a decision to make<br class="hidden lg:block" /> or a system to untangle?</h2>
+          <p class="mt-6 max-w-[560px] text-slate">Tell us what you’re working on. We’ll reply within two working days.</p>
+          <div class="mt-9 flex flex-wrap items-center gap-x-6 gap-y-5"><ContactLink /><p class="text-sm text-slate">or email <a class="email-link" href="mailto:hello@prelude.build">hello@prelude.build</a></p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-width border-t border-graphite pb-8 pt-9 sm:pb-10 sm:pt-10">
+      <div class="footer-heading flex flex-wrap items-start justify-between gap-8">
+        <Logo />
+        <details id="privacy" class="group max-w-[650px] text-sm text-slate">
+          <summary class="ml-auto w-fit cursor-pointer py-1 marker:text-slate hover:text-cloud">Privacy</summary>
+          <p class="mt-5 max-w-prose leading-relaxed">This site sets no cookies and uses no analytics or tracking. If you email us, we use your name, address and message only to reply and to discuss potential work, and we keep them only as long as needed for that purpose. Data controller: Prelude Engineering Limited, 90 Leinster Road, Rathmines, Dublin 6, D06 F3P4, Ireland. Contact: <a class="email-link" href="mailto:hello@prelude.build">hello@prelude.build</a>.</p>
+        </details>
+      </div>
+      <div class="mt-8 flex flex-col justify-between gap-5 text-xs leading-[1.9] text-slate sm:flex-row sm:items-end">
+        <p>Prelude Engineering Limited · Registered in Ireland, no. 828717<br />Registered office: 90 Leinster Road, Rathmines, Dublin 6, D06 F3P4, Ireland</p>
+        <p class="shrink-0">© 2026 Prelude Engineering Limited</p>
+      </div>
+    </footer>
+  </body>
+</html>

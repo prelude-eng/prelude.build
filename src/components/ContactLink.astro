@@ -1,0 +1,6 @@
+---
+import Arrow from './Arrow.astro';
+interface Props { compact?: boolean; }
+const { compact = false } = Astro.props;
+---
+<a class:list={['button', 'button-primary', { 'button-compact': compact }]} href="mailto:hello@prelude.build?subject=Project%20enquiry">Start a conversation<Arrow /></a>
